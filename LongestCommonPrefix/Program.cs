@@ -13,10 +13,9 @@ namespace LongestCommonPrefix
 
         public static string LongestCommonIndex(string[] words)
         {
-            string result = "";
             int index = 0;
             int counter;
-            StringBuilder tmp_string = new();
+            StringBuilder result = new();
             while (index < words[0].Length)
             {
                 counter = 0;
@@ -29,19 +28,15 @@ namespace LongestCommonPrefix
                 }
                 if (counter == words.Length)
                 {
-                    tmp_string.Append(words[0][index]);
+                    result.Append(words[0][index]);
                 }
                 else
                 {
                     break;
                 }
-                if (tmp_string.Length > result.Length)
-                {
-                    result = tmp_string.ToString();
-                }
                 index++;
             }
-            return result;
+            return result.ToString();
         }
     }
 }
