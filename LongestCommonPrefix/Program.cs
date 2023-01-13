@@ -33,7 +33,6 @@ namespace LongestCommonPrefix
                 }
                 else
                 {
-                    tmp_string.Clear();
                     break;
                 }
                 if (tmp_string.Length > result.Length)
